@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+    <style>
+        a:link{
+            text-decoration:none;
+        }
+    </style>
+</head>
+<body>
+    <h1>哈哈</h1>
+    {% block content %}
+
+    {% endblock %}
+    {% for k, v in book.items %}
+        <h1>{{ k }}:{{ v }}</h1>
+    {% endfor %}
+
+    <a href="{% url 'new' %}">new</a>
+    <a href="{% url 'tiyu' %}">体育</a>
+    {% now 'Y m d H:i:s D' %}
+
+    {% if age > 13 %}
+        <h1>OK</h1>
+    {% else %}
+        <h1>错误</h1>
+    {% endif %}
+
+
+    {% for f, o in  book.items%}
+        <h1>{{ f }}:{{ o }}</h1>
+        {% empty %}
+        <h1>{{ empty }}</h1>
+    {% endfor %}
+
+</body>
+</html>

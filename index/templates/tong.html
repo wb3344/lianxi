@@ -1,5 +1,5 @@
-{% for k, v in book.items %}
-    <h1>{{ k }}:{{ v }}</h1>
+{% for k in roo %}
+    <i>{{ k }}</i>
 {% endfor %}
 
 <a href="{% url 'new' %}">new</a>
@@ -16,5 +16,11 @@
     <h1>{{ f }}:{{ o }}</h1>
 {% empty %}
     <h1>没有数据</h1>
+{% endfor %}
+
+{% for f, o in  book.items %}
+    <h3>{{ f }}:{{ o }}</h3>
+{% empty %}
+    <h6>没有数据</h6>
 {% endfor %}
 

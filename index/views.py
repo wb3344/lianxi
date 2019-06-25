@@ -23,6 +23,12 @@ class IndexView(View):
         return render(request, 'index.html', context=contents)
 
 
+class NewView(View):
+
+    def post(self, request):
+        return render(request, 'nv.html')
+
+
 def new(request):
     return render(request, 'new.html')
 

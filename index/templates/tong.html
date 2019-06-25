@@ -4,6 +4,7 @@
 
 <a href="{% url 'new' %}">new</a>
 <a href="{% url 'tiyu' %}">体育</a>
+<a href="{% url 'nv' %}">nv</a>
 {% now 'Y m d H:i:s D' %}
 
 {% if age > 13 %}
@@ -15,7 +16,7 @@
 {% for f, o in  kong %}
     <h1>{{ f }}:{{ o }}</h1>
 {% empty %}
-    <h1>没有数据</h1>
+    <h1>{{ empty }}</h1>
 {% endfor %}
 
 {% for f, o in  book.items %}
